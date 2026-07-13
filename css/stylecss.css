@@ -1,0 +1,882 @@
+@charset "utf-8";
+
+:root {
+    /* Primary Colors */
+    --color-primary: #9a4a3f;
+    --color-primary-dark: #7d3b34;
+    --color-primary-medium: #b35a4b;
+    
+    /* Course Colors */
+    --color-course-1: #b35a4b;
+    --color-course-2: #7f9b7a;
+    --color-course-3: #5c6f8a;
+    
+    /* Neutral Colors */
+    --color-white: #fff;
+    --color-bg-light: #f9f9f9;
+    --color-bg-light-gray: #e5e4e6;
+    --color-light-badge: #f3e6e1;
+    
+    /* Text Colors */
+    --color-text-dark: #333;
+    --color-text-lighter: #666;
+    --color-text-lightest: #888;
+
+    
+    /* Gray Shades */
+    --color-gray-light: #ddd;
+    --color-gray-medium: #afafb0;
+    --color-gray-badge: #e7ecef;
+    
+    /* Dark Colors */
+    --color-dark-footer: #180614;
+    --color-black: #000;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    line-height: 1.6;
+    background-color: var(--color-bg-light);
+    color: var(--color-text-dark);
+    padding-top: 80px;
+}
+
+h1,
+h2,
+h3,
+strong {
+    font-family: 'Shippori Mincho', serif;
+    font-weight: 700;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* ヘッダー */
+header {
+    position: fixed;
+    font-size: 16px;
+    padding: 1.5rem 3rem;
+    background-color: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    display: flex;
+    justify-content: space-between;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-sizing: border-box;
+    transition: background-color 0.4s ease, backdrop-filter 0.4s ease;
+}
+
+header a {
+    text-decoration: none;
+    color: var(--color-black);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+#menu-nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+/* ハンバーガーメニュー */
+
+#hamburger-nav {
+    display: none;
+}
+
+.hamburger-icon {
+    position: fixed;
+    top: 1rem;
+    right: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 24px;
+    width: 30px;
+    cursor: pointer;
+    z-index: 1040;
+}
+
+.hamburger-icon span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: var(--color-black);
+}
+
+#hamburger-links {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 60%;
+    height: 100vh;
+    background: var(--color-bg-light-gray);
+    border-radius: 32px 0 0 32px;
+    z-index: 1030;
+    transform: translateX(100%);
+    transition: transform 0.4s ease;
+}
+
+#hamburger-links.open {
+    transform: translateX(0);
+}
+
+#hamburger-links ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 60%;
+    padding: 8rem 3rem 0;
+    list-style: none;
+    z-index: 1020;
+}
+
+#hamburger-links a {
+    font-size: 1rem;
+    color: var(--color-black);
+    text-decoration: none;
+}
+
+#hamburger-links li {
+    list-style: none;
+    margin-top: 20px;
+}
+
+
+#hamburger-links span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: var(--color-black);
+    margin-bottom: 20px;
+}
+
+#hamburger-links p {
+    color: var(--color-text-lighter);
+    font-size: 0.6rem;
+    margin-bottom: 8px;
+}
+
+/* アイコン変形 */
+
+.hamburger-icon span:first-child {
+    opacity: 1;
+    transform: none;
+}
+
+.hamburger-icon.open span:first-child {
+    transform: rotate(45deg) translate(10px, 5px);
+}
+
+.hamburger-icon.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-icon.open span:last-child {
+    transform: rotate(-45deg) translate(10px, -5px);
+}
+
+.hamburger-icon.open {
+    transform: translateX(-20px);
+}
+
+.hamburger-icon span {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* ブラー */
+
+.page-content {
+    position: fixed;
+    inset: 0;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    background: rgba(255, 255, 255, 0.1);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+    z-index: 1010;
+}
+
+.page-content.blur {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+/* ページ全体のスクロール制御 */
+
+body.no-scroll,
+html.no-scroll {
+    overflow: hidden;
+}
+
+/* 下線アニメーション */
+#menu-nav a {
+    display: inline-block;
+    padding: 5px 0;
+    position: relative;
+    color: var(--color-black);
+    text-decoration: none;
+}
+
+#menu-nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background-color: var(--color-black);
+    transform: scaleX(0);
+    transform-origin: left center;
+    transition: transform 0.3s ease;
+}
+
+#menu-nav a:hover::after,
+#menu-nav a:focus::after {
+    transform: scaleX(1);
+}
+
+/* トップページに移動 */
+
+.pagetop {
+    height: 50px;
+    width: 50px;
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    background: var(--color-white);
+    border: solid 2px var(--color-text-lighter);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.pagetop__arrow {
+    height: 10px;
+    width: 10px;
+    border-top: 3px solid var(--color-text-lighter);
+    border-right: 3px solid var(--color-text-lighter);
+    transform: translateY(20%) rotate(-45deg);
+}
+
+
+
+
+
+/* トップ画像 */
+
+.main-box {
+    min-height: calc(100vh - 80px);
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: center;
+    gap: 3rem;
+    padding: 0 3rem 3rem;
+}
+
+.main-text {
+    max-width: 560px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.eyebrow {
+    display: inline-block;
+    font-size: 0.85rem;
+    letter-spacing: 0.08em;
+    color: var(--color-primary);
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.main-text h1 {
+    font-size: 3rem;
+    line-height: 1.05;
+    margin-bottom: 1rem;
+    margin-left: -3px;
+    white-space: nowrap;
+}
+
+.main-text h2 {
+    font-size: 1.4rem;
+    line-height: 1.6;
+    margin-bottom: 1.6rem;
+    margin-left: -3px;
+    white-space: nowrap;
+}
+
+.hero-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 1.8rem;
+    margin-top: 32px;
+    border-radius: 999px;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    text-decoration: none;
+    font-weight: 700;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.hero-button:hover,
+.hero-button:focus {
+    background-color: var(--color-primary-dark);
+    transform: translateY(-1px);
+}
+
+.main-bg {
+    width: 100%;
+    min-height: 520px;
+    background-image: url(../images/main-img.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 32px;
+    box-shadow: 0 24px 50px rgba(0, 0, 0, 0.12);
+}
+
+/* 各要素タイトル系 */
+.section-box {
+    padding: 4rem 3rem 6rem;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.section-box h2 {
+    font-size: 2.4rem;
+    margin-bottom: 2rem;
+}
+
+.english-title {
+    font-size: 0.9rem;
+    color: var(--color-text-lightest);
+    margin-left: 0.5rem;
+}
+
+.section-box>* {
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* セクション前提設定 */
+
+.section-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    margin-top: 4rem;
+}
+
+.section-list li {
+    list-style: none;
+    background: var(--color-white);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.section-list li:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+}
+
+.section-list a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    padding: 1.2rem 1.2rem 0.6rem;
+    text-align: center;
+}
+
+.card-content h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1.2rem;
+    flex-shrink: 0;
+}
+
+.card-content p {
+    font-size: 0.9rem;
+    flex: 1;
+    overflow: hidden;
+}
+
+/* 散策コース */
+
+#course-section {
+    background-color: var(--color-white);
+}
+
+.course-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4rem;
+    margin-top: 4rem;
+}
+
+.course-list li {
+    list-style: none;
+    background: var(--color-white);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.course-list li:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+}
+
+.course-list a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.course-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.card-head {
+    height: 48px;
+    width: 100%;
+}
+
+.card-foot {
+    height: 36px;
+    width: 100%;
+}
+
+.course-1 {
+    background-color: var(--color-course-1);
+
+}
+
+.course-2 {
+    background-color: var(--color-course-2);
+}
+
+.course-3 {
+    background-color: var(--color-course-3);
+}
+
+.course-img {
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    height: 448px;
+}
+
+.course-img::before {
+    z-index: 10;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    opacity: 1;
+    transition: opacity 0.2s;
+}
+
+.course-img:hover::before {
+    opacity: 0.4;
+}
+
+#course-img-1 {
+    background-image: url(../images/course-img-1.jpg);
+}
+
+#course-img-2 {
+    background-image: url(../images/course-img-2.jpg);
+}
+
+#course-img-3 {
+    background-image: url(../images/course-img-3.jpg);
+}
+
+.course-title {
+    position: relative;
+    z-index: 20;
+    color: var(--color-white);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.course-title h3 {
+    writing-mode: vertical-lr;
+    letter-spacing: 0.25rem;
+    font-size: 1.6rem;
+}
+
+.course-spots {
+    padding: 0;
+    text-align: left;
+}
+
+#course-spots-1 {
+    margin-top: 6rem;
+}
+
+#course-spots-2 {
+    margin-top: 2.25rem;
+}
+
+#course-spots-3 {
+    margin-top: 6rem;
+}
+
+.space-1 {
+    display: inline-block;
+    width: 100%;
+    height: 1.5rem;
+}
+
+.space-2 {
+    display: inline-block;
+    width: 100%;
+    height: 0.5rem;
+}
+
+.br-mobile {
+    display: none;
+}
+
+/* カードの内容 */
+
+.section-list img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.spot-title {
+    height: 150px;
+}
+
+.spot-title p {
+    color: var(--color-text-lighter);
+}
+
+.card-detail {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin-top: auto;
+    flex-shrink: 0;
+}
+
+.card-station {
+    display: inline-flex;
+    align-items: center;
+    color: var(--color-text-lighter);
+    font-size: 0.8rem;
+    gap: 0.45rem;
+    line-height: 1.2;
+}
+
+.transport-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 2.2rem;
+    padding: 0.15rem 0.45rem;
+    border-radius: 999px;
+    font-size: 0.72rem;
+    line-height: 1;
+    flex-shrink: 0;
+}
+
+.transport-badge.bus {
+    background: var(--color-light-badge);
+    color: var(--color-primary);
+}
+
+.transport-badge.train {
+    background: var(--color-gray-badge);
+    color: var(    --color-text-dark);
+}
+
+.card-link {
+    color: var(--color-text-dark);
+    white-space: nowrap;
+    font-size: 0.8rem;
+    transition: color 0.2s ease;
+}
+
+.card-link:hover {
+    color: var(--color-primary);
+}
+
+/* 情報まとめ */
+#info-section {
+    background-color: var(--color-white);
+}
+
+.info-list {
+    text-align: left;
+    padding: 2rem 2rem 0 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+
+}
+
+.info-item {
+    background-color: var(--color-bg-light);
+    border-radius: 16px;
+    padding: 2rem;
+}
+
+.info-item h4 {
+    border-left: 2px solid var(--color-primary-medium);
+    padding-left: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.info-item p {
+    padding-left: 0.875rem;
+}
+
+/* フッター */
+
+footer {
+    text-align: left;
+    font-size: 0.8rem;
+    color: var(--color-bg-light);
+    background-color: var(--color-dark-footer);
+    padding: 3rem 3rem;
+}
+
+.footer-content p{
+    margin: 0.5rem 0;
+}
+
+.fa-brands {
+    color: var(--color-bg-light);
+    font-size: 1.5rem;
+    margin: 0.75rem;
+}
+
+.contact-info {
+    padding: 1rem 0;
+}
+
+.contact-info a {
+    text-decoration: none;
+    color: var(--color-bg-light);
+}
+
+.footer-nav a {
+    text-decoration: none;
+    color: var(--color-bg-light);
+}
+
+.footer-nav {
+    margin-top: 1.5rem;
+}
+
+.footer-nav a:hover {
+    text-decoration: underline;
+}
+/* メディアクエリ */
+
+@media screen and (max-width: 1050px) {
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+
+    header {
+        padding: 1rem 2.5rem;
+        font-size: 14px;
+    }
+
+    .main-text {
+        margin: 0 auto;
+    }
+
+    .main-box {
+        grid-template-columns: 1fr;
+        padding: 0 2rem 2rem;
+    }
+
+    .main-bg {
+        min-height: 320px;
+    }
+
+    .section-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 2.5rem;
+    }
+
+    .course-list {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    #course-spots-1 {
+        margin-top: 5rem;
+    }
+
+    #course-spots-2 {
+        margin-top: 1.25rem;
+    }
+
+    #course-spots-3 {
+        margin-top: 5rem;
+    }
+
+    .course-img {
+        height: 400px;
+    }
+
+    .info-list {
+        grid-template-columns: 1fr;
+
+    }
+}
+
+
+@media screen and (max-width: 660px) {
+
+    h1 {
+        font-size: 1.2rem;
+    }
+
+    p {
+        font-size: 0.8rem;
+    }
+
+    .card-content h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+    .card-content p {
+        font-size: 0.8rem;
+    }
+
+
+    .section-box h2 {
+        font-size: 1.6rem;
+    }
+
+    .section-box h3 {
+        font-size: 1.5rem;
+    }
+
+    header {
+        padding: 1rem 2rem;
+        font-size: 12px;
+    }
+
+    #menu-nav {
+        display: none;
+    }
+
+    #hamburger-nav {
+        display: block;
+    }
+
+    .main-text h1 {
+        font-size: 2rem;
+    }
+
+    .main-text h2 {
+        font-size: 1rem;
+    }
+
+    .main-box {
+        gap: 4rem;
+    }
+
+    .main-bg {
+        min-height: 280px;
+    }
+
+    .hero-button {
+        width: 100%;
+        max-width: 320px;
+        padding: 1rem 0;
+    }
+
+    .section-list {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .course-title h3 {
+        writing-mode: horizontal-tb;
+    }
+
+    .course-img {
+        height: 380px;
+    }
+
+    #course-spots-1 {
+        margin-top: 6rem;
+    }
+
+    #course-spots-2 {
+        margin-top: 6rem;
+    }
+
+    #course-spots-3 {
+        margin-top: 6rem;
+    }
+
+    .br-mobile {
+        display: inline-block;
+    }
+
+}

@@ -1,0 +1,305 @@
+@charset "utf-8";
+
+
+/* hero部分 */
+
+.course-hero {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.course-hero-overlay {
+    margin-top: 80px;
+    margin: 3rem auto;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    width: 90%;
+    min-height: 480px;
+    border-radius: 16px;
+}
+
+.course-hero-overlay::before {
+    z-index: 10;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    opacity: 1;
+    transition: opacity 0.2s;
+    border-radius: 16px;
+}
+
+.course-hero-title {
+    display: flex;
+    flex-direction: column;
+    color: var(--color-bg-light);
+    text-align: left;
+    gap: 2rem;
+    padding: 2rem;
+    z-index: 20;
+}
+
+.course-hero-text-border{
+    padding: 0.3rem 0.9rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 2.2rem;
+    border-radius: 999px;
+    line-height: 1;
+    flex-shrink: 0;
+    border:1px solid var(--color-bg-light);
+}
+
+/* コース概要 */
+.course-about p {
+    background-color: var(--color-white);
+    border-radius: 16px;
+    padding: 1.5rem;
+    line-height: 1.5rem;
+}
+
+.course-about{
+    margin: 0 auto;
+    text-align: left;
+}
+
+/* 道案内 */
+
+.route-section {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 0 3rem 3rem;
+}
+
+.route-flow {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.route-time {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+    text-align: left;
+}
+
+.route-text-colum {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.route-station {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1rem;
+    border: 1px solid var(--color-gray-light);
+    border-radius: 8px;
+}
+
+.route-item {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 3rem;
+    padding: 1.5rem;
+    align-items: center;
+    border: 1px solid var(--color-gray-light);
+    border-radius: 16px;
+}
+
+.route-border {
+    width: 1px;
+    height: 8rem;
+    background: var(--color-gray-medium);
+}
+
+/* 観光地写真 */
+
+.route-image {
+    width: 100%;
+    min-height: 380px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 16px;
+}
+
+/* 王道巡り */
+
+#course-standard-hero {
+    background-image: url(../images/course_standard_hero.jpg);
+}
+
+#route-standard-image-01 {
+    background-image: url(../images/route_standard_01.jpg);
+}
+
+#route-standard-image-02 {
+    background-image: url(../images/route_standard_02.jpg);
+}
+
+#route-standard-image-03 {
+    background-image: url(../images/route_standard_03.jpg);
+
+}
+
+#route-standard-image-04 {
+    background-image: url(../images/route_standard_04.jpg);
+}
+
+#route-standard-image-05 {
+    background-image: url(../images/route_standard_05.jpg);
+}
+
+/* ゆったり巡る */
+
+#course-relax-hero{
+    background-image: url(../images/course_relax_hero.jpg);
+}
+
+#route-relax-image-01{
+    background-image: url(../images/route_relax_01.jpg);
+}
+
+#route-relax-image-02{
+    background-image: url(../images/route_relax_02.jpg);
+}
+
+#route-relax-image-03{
+    background-image: url(../images/route_relax_03.jpg);
+}
+
+#route-relax-image-04{
+    background-image: url(../images/route_relax_04.jpg);
+}
+
+/* 景色巡り */
+#course-scenery-hero{
+    background-image: url(../images/course_scenery_hero.jpg);
+}
+
+#route-scenery-image-01{
+    background-image: url(../images/route_scenery_01.jpg);
+}
+
+#route-scenery-image-02{
+    background-image: url(../images/route_scenery_02.jpg);
+}
+
+#route-scenery-image-03{
+    background-image: url(../images/route_scenery_03.jpg);
+}
+
+#route-scenery-image-04{
+    background-image: url(../images/route_scenery_04.jpg);
+}
+
+/* 観光地解説 */
+
+.route-description {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 600px;
+    text-align: left;
+    line-height: 2;
+}
+
+.route-description h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.route-station-name {
+    font-weight: bold;
+}
+
+.time-estimate {
+    padding: 0.3rem 0.9rem;
+    font-size: 0.9rem;
+    color: var(--color-text-medium);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    min-width: 2.2rem;
+    border-radius: 999px;
+    line-height: 1;
+    flex-shrink: 0;
+    background: var(--color-gray-badge);
+    color: var(--color-text-badge-dark);
+}
+
+.route-time-duration {
+    font-size: 0.9rem;
+    color: var(--color-text-medium);
+}
+
+/* トップページへ */
+.back-link{
+    display:inline-block;
+    margin-top:3rem;
+    color:var(--color-text-gray);
+    text-decoration:none;
+    transition:0.2s;
+    
+}
+
+.back-link:hover{
+    color:var(--color-text-dark);
+    transform:translateX(-4px);
+}
+
+@media screen and (max-width: 1050px) {
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .route-description {
+        margin: 0 auto;
+    }
+
+    .route-item {
+        grid-template-columns: 1fr;
+    }
+
+    .course-hero {
+        min-height: 300px;
+    }
+
+    .course-hero-title{
+        gap: 1.5rem
+    }
+
+    .route-image {
+        min-height: 320px;
+    }
+
+}
+
+@media screen and (max-width: 660px) {
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .course-hero {
+        min-height: 240px;
+    }
+
+    .course-hero-title{
+        gap: 1rem
+    }
+}

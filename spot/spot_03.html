@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/stylecss.css">
+    <link rel="stylesheet" href="../css/spot.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>京都観光 ―― 迷わず楽しむガイドブック</title>
+</head>
+
+<body>
+
+    <nav id="hamburger-nav">
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div id="hamburger-links">
+                <ul>
+                    <li><a href="../index.html" onclick="toggleMenu()">トップページ
+                            <p>トップページに戻ります。</p>
+                        </a>
+                    </li>
+                    <span></span>
+                    <li><a href="../index.html#course-section" onclick="toggleMenu()">散策コース
+                            <p>効率よく巡るおすすめの散策コースをご紹介します。</p>
+                        </a>
+                    </li>
+                    <span></span>
+                    <li><a href="../index.html#spot-section" onclick="toggleMenu()">おすすめスポット
+                            <p>魅力的なスポットをご紹介します。</p>
+                        </a>
+                    </li>
+                    <span></span>
+                    <li><a href="../index.html#info-section" onclick="toggleMenu()">情報まとめ
+                            <p>快適に観光するためのポイントをご紹介します。</p>
+                        </a>
+                    </li>
+                    <span></span>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <a class="pagetop" href="#">
+        <div class="pagetop__arrow"></div>
+    </a>
+
+    <div class="page-content" onclick="toggleMenu()"></div>
+    <header>
+
+        <!-- headerメニュー -->
+
+        <div class="header-container">
+            <h2>
+                <a href="../index.html">京都観光</a>
+            </h2>
+            <nav id="menu-nav">
+                <ul>
+                    <li><a href="../index.html#course-section">散策コース</a></li>
+                    <li><a href="../index.html#spot-section">おすすめスポット</a></li>
+                    <li><a href="../index.html#info-section">情報まとめ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="section-box">
+        <div class="spot-container">
+            <h2 class="spot-name">祇園</h2>
+            <div class="spot-content-body">
+                <p>
+                    <img src="../images/list-img-3.jpg" alt="祇園" class="spot-hero-image">
+                </p>
+                <h3>概要</h3>
+                <p>祇園は八坂神社の門前町として発展してきたエリアで、現在も京都を代表する花街のひとつとして知られています。<br>
+                    石畳の道や町家が残る街並みが特徴で、通りを歩くだけでも京都らしい雰囲気を感じることができます。<br>
+                    観光地として賑わう一方で、一本路地に入ると静かな町並みが広がり、昼と夜で大きく表情が変わるのも祇園の魅力です。<br>
+                    飲食店や茶屋が並ぶ通りだけでなく、白川沿いの景色や歴史ある建物など、歩きながら楽しめる見どころが数多く集まっています。
+                </p>
+                <h3>見どころ</h3>
+                <h4>花見小路</h4>
+                <p>祇園を代表する通りのひとつ。石畳の道沿いには町家や料亭、お茶屋が並び、京都らしい街並みを感じながら散策できます。<br>
+                    四条通より南側では伝統的な建物が続き、祇園らしい風景を楽しめるエリアとして知られています。<br>
+                    夕方以降は建物の灯りがともり、昼間とは異なる落ち着いた雰囲気になります。
+                </p>
+                <h4>白川南通</h4>
+                <p>白川沿いに続く石畳の通りです。柳や桜が並ぶ川沿いの景色と町家が調和し、祇園の中でも特に風情を感じやすい場所として知られています。<br>
+                    春には桜が咲き、周辺一帯がやわらかな雰囲気に包まれます。<br>
+                    観光客が多い花見小路と比べると比較的落ち着いて歩きやすく、ゆっくり景色を楽しみたい方にもおすすめです。
+                </p>
+                <h4>巽橋周辺</h4>
+                <p>白川南通沿いにある小さな橋で、祇園らしい景観を代表する撮影スポットのひとつです。<br>
+                    周囲には町家や柳並木が続き、京都らしい風景を写真に残しやすい場所として人気があります。<br>
+                    特に朝や夕方は人通りが比較的少なく、落ち着いた雰囲気の中で散策できます。</p>
+                <h3>所要時間・歩く量</h3>
+                <p>
+                    花見小路や白川南通を中心に散策する場合は、60〜90分ほどを目安にするとゆっくり街並みを楽しめます。<br>
+                    周辺の八坂神社や建仁寺まで含めて巡る場合は、さらに時間に余裕を持っておくのがおすすめです。<br>
+                    大きな坂道は少なく歩きやすいエリアですが、細い路地や周辺スポットを含めて歩くことが多いため、歩行距離はやや長めになります。
+                </p>
+                <h3>営業時間</h3>
+                <p>祇園の街並み自体は自由に散策できます。</p>
+                <h3>料金</h3>
+                <p>散策自由・無料<br>
+                    ただし、周辺の寺院や施設、飲食店などは営業時間や利用料金が異なります。<br>
+                    また、花見小路や白川南通には実際に営業している店舗や住宅もあるため、散策の際は私有地への立ち入りや無断撮影などに配慮しながら観光することが大切です。</p>
+                <h3>アクセス</h3>
+                <p>
+                    京阪本線「祇園四条駅」から徒歩約3〜5分です。阪急京都線「京都河原町駅」からも徒歩圏内にあり、鴨川を渡ってアクセスできます。<br>
+                    また、市バス206系統などを利用して「祇園」停留所で下車すると、八坂神社や花見小路周辺へアクセスしやすくなります。</p>
+                <p>
+                    祇園は八坂神社、建仁寺、白川南通などが徒歩圏内にまとまっているため、地図を見ながら細い路地を散策するだけでも京都らしい街並みを楽しめるエリアです。
+                </p>
+            </div>
+            <div class="home-link">
+                <a href="../index.html#spot-section">おすすめスポット一覧へ</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <h2>京都観光ガイドブック</h2>
+            <i class="fa-brands fa-line"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-instagram"></i>
+
+            <p>京都らしい街並みや人気スポットを、迷わず心地よく巡れるように。
+                初めての観光でも楽しみやすい情報を紹介しています。</p>
+            <nav class="footer-nav">
+                <ul>
+                    <li><a href="../index.html#course-section">散策コース</a></li>
+                    <li><a href="../index.html#spot-section">おすすめスポット</a></li>
+                    <li><a href="../index.html#info-section">情報まとめ</a></li>
+                </ul>
+            </nav>
+            <p class="contact-info">お問い合わせ: <a href="mailto:info@kyoto-tourism.com">info@kyoto-tourism.com</a></p>
+        </div>
+        <p>&copy; 2026 京都観光ガイドブック</p>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+
+</html>

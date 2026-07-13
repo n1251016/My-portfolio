@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/stylecss.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>京都観光 ―― 迷わず楽しむガイドブック</title>
+</head>
+
+<body>
+
+    <nav id="hamburger-nav">
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div id="hamburger-links">
+                <ul>
+                    <li><a href="index.html" onclick="toggleMenu()">トップページ
+                            <p>トップページに戻ります。</p>
+                        </a>
+                    </li>
+                    <span></span>
+                    <li><a href="#course-section" onclick="toggleMenu()">散策コース
+                            <p>効率よく巡るおすすめの散策コースをご紹介します。</p>
+                        </a>
+                    </li>
+                    <span></span>
+                    <li><a href="#spot-section" onclick="toggleMenu()">おすすめスポット
+                            <p>魅力的なスポットをご紹介します。</p>
+                        </a>
+                    </li>
+                    <span></span>
+                    <li><a href="#info-section" onclick="toggleMenu()">情報まとめ
+                            <p>快適に観光するためのポイントをご紹介します。</p>
+                        </a>
+                    </li>
+                    <span></span>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <a class="pagetop" href="#">
+        <div class="pagetop__arrow"></div>
+    </a>
+
+    <div class="page-content" onclick="toggleMenu()"></div>
+
+    <header>
+
+        <!-- headerメニュー -->
+
+        <div class="header-container">
+            <h2>
+                <a href="index.html">京都観光</a>
+            </h2>
+            <nav id="menu-nav">
+                <ul>
+                    <li><a href="#course-section">散策コース</a></li>
+                    <li><a href="#spot-section">おすすめスポット</a></li>
+                    <li><a href="#info-section">情報まとめ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ヒーロー -->
+
+    <main class="main-box">
+        <div class="main-text">
+            <p class="eyebrow">京都観光をもっとシンプルに</p>
+            <h1>はじめてでも迷わない<br>京都観光</h1>
+            <h2>スポット選びから散策ルートまで、<br>快適な京都観光をサポートします。</h2>
+            <p>初めての京都でも快適に観光できるよう、おすすめスポットや散策コースをわかりやすく紹介します。</p>
+            <a class="hero-button" href="#course-section">おすすめのコースを見る</a>
+        </div>
+        <div class="main-bg"></div>
+    </main>
+
+    <!-- 散策コース -->
+
+    <section class="section-box" id="course-section">
+        <h2 class="section-title">おすすめ散策コース</h2>
+        <p>京都を効率よく巡るおすすめの散策コースをご紹介します。</p>
+        <p>ここに散策コースの詳細な情報を記載します。</p>
+
+        <!-- ここからリスト -->
+        <ul class="course-list">
+            <li class="course-card">
+                <a href="course/course_01.html">
+                    <div class="card-head course-1"></div>
+                    <div class="card-content course-img" id="course-img-1">
+                        <div class="course-title">
+                            <h3>王道巡り</h3>
+                            <p class="course-spots" id="course-spots-1">
+                                清水寺<br>
+                                八坂神社<br>
+                                祇園<br>
+                                <span class="space-1"></span>
+                                京都らしい街並みや定番スポットを、回りやすい動線で楽しめる王道ルート。<br>
+                                <span class="space-2"></span>
+                                <span>詳細を見る →</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card-foot course-1"></div>
+                </a>
+            </li>
+            <li class="course-card">
+                <a href="course/course_02.html">
+                    <div class="card-head course-2"></div>
+                    <div class="card-content course-img" id="course-img-2">
+                        <div class="course-title">
+                            <h3>ゆったり巡る</h3>
+                            <p class="course-spots" id="course-spots-2">
+                                嵐山<br>
+                                竹林の小径<br>
+                                桂川<br>
+                                <span class="space-1"></span>
+                                嵐山の自然や川沿いの景色を、<br class="br-mobile">落ち着いた動線で楽しめる散策コース。<br>
+                                <span class="space-2"></span>
+                                <span>詳細を見る → <span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card-foot course-2"></div>
+                </a>
+            </li>
+            <li class="course-card">
+                <a href="course/course_03.html">
+                    <div class="card-head course-3"></div>
+                    <div class="card-content course-img" id="course-img-3">
+                        <div class="course-title">
+                            <h3>景色巡り</h3>
+                            <p class="course-spots" id="course-spots-3">
+                                伏見稲荷<br>
+                                八坂の塔<br>
+                                祇園<br>
+                                <span class="space-1"></span>
+                                伏見稲荷や東山の景色を、<br class="br-mobile">写真を撮りながら巡れる観光コース。<br>
+                                <span class="space-2"></span>
+                                <span>詳細を見る → </span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card-foot course-3"></div>
+                </a>
+            </li>
+        </ul>
+    </section>
+
+    <!-- おすすめスポット -->
+
+    <section class="section-box" id="spot-section">
+        <h2 class="section-title">おすすめスポット</h2>
+        <p>京都の魅力的なスポットをご紹介します。</p>
+        <p>ここにおすすめスポットの情報を記載します。</p>
+
+
+        <!-- ここからリスト -->
+        <ul class="section-list">
+            <li>
+                <a href="spot/spot_01.html">
+                    <img src="images/list-img-1.jpg" alt="清水寺">
+                    <div class="card-content spot-title">
+                        <h3>清水寺<span class="english-title">kiyomizu-dera</span></h3>
+                        <p>京都を代表する世界遺産の寺院。<br>
+                            清水の舞台から望む京都の景色が魅力。</p>
+                        <div class="card-detail">
+                            <span class="card-station"> <span class="transport-badge bus">バス</span>
+                                五条坂
+                            </span>
+                            <span class="card-link">詳しく見る →</span>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="spot/spot_02.html">
+                    <img src="images/list-img-2.jpg" alt="嵐山">
+                    <div class="card-content spot-title">
+                        <h3>嵐山<span class="english-title">arashiyama</span></h3>
+                        <p>自然豊かなエリア。<br>
+                            竹林や渡月橋などの見どころがある。</p>
+                        <div class="card-detail">
+                            <span class="card-station"> <span class="transport-badge train">電車</span>
+                                嵐山駅
+                            </span>
+                            <span class="card-link">詳しく見る →</span>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="spot/spot_03.html">
+                    <img src="images/list-img-3.jpg" alt="祇園">
+                    <div class="card-content spot-title">
+                        <h3>祇園<span class="english-title">gion</span></h3>
+                        <p>伝統的な街並みが残るエリア。<br>
+                            舞妓さんに出会えることも。</p>
+                        <div class="card-detail">
+                            <span class="card-station"> <span class="transport-badge train">電車</span>
+                                祇園四条駅
+                            </span>
+                            <span class="card-link">詳しく見る →</span>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="spot/spot_04.html">
+                    <img src="images/list-img-4.jpg" alt="伏見稲荷">
+                    <div class="card-content spot-title">
+                        <h3>伏見稲荷<span class="english-title">fushimi-inari</span></h3>
+                        <p>千本鳥居で有名な神社。<br>
+                            赤い鳥居が連なる幻想的な風景が広がる。</p>
+                        <div class="card-detail">
+                            <span class="card-station"> <span class="transport-badge train">電車</span>
+                                稲荷駅
+                            </span>
+                            <span class="card-link">詳しく見る →</span>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="spot/spot_05.html">
+                    <img src="images/list-img-5.jpg" alt="金閣寺">
+                    <div class="card-content spot-title">
+                        <h3>金閣寺<span class="english-title">kinkaku-ji</span></h3>
+                        <p>金色に輝く美しい寺院。<br>
+                            池に映る姿が絶景。</p>
+                        <div class="card-detail">
+                            <span class="card-station"> <span class="transport-badge bus">バス</span>
+                                金閣寺道
+                            </span>
+                            <span class="card-link">詳しく見る →</span>
+                        </div>
+                    </div>
+                </a>
+            </li>
+
+            <li>
+                <a href="spot/spot_06.html">
+                    <img src="images/list-img-6.jpg" alt="錦市場">
+                    <div class="card-content spot-title">
+                        <h3>錦市場<span class="english-title">nishiki market</span></h3>
+                        <p>地元の食材やお土産が揃う市場。<br>
+                            食べ歩きも楽しめる。</p>
+                        <div class="card-detail">
+                            <span class="card-station"><span class="transport-badge train">電車</span>
+                                鳥丸駅
+                            </span>
+                            <span class="card-link">詳しく見る →</span>
+                        </div>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </section>
+
+    <!-- 情報まとめ -->
+
+    <section class="section-box" id="info-section">
+        <h2 class="section-title">快適に巡るポイント</h2>
+        <p>快適に観光するためのポイントをご紹介します。</p>
+        <p>ここに快適に観光するための情報を記載します。</p>
+
+        <div class="info-list">
+            <div class="info-item">
+                <h4>朝の時間帯を活用する</h4>
+                <p>清水寺や伏見稲荷などの人気スポットは、朝の方が比較的ゆったり楽しめます。</p>
+            </div>
+            <div class="info-item">
+                <h4>エリアを絞って巡る</h4>
+                <p>東山や嵐山など、近いエリアをまとめて巡ることで移動疲れを減らせます。</p>
+            </div>
+            <div class="info-item">
+                <h4>歩きやすい靴を選ぶ</h4>
+                <p>京都は石畳や坂道が多いため、長時間歩いても疲れにくい靴がおすすめです。</p>
+            </div>
+            <div class="info-item">
+                <h4>カフェや川沿いで休憩する</h4>
+                <p>鴨川や嵐山周辺で少し休憩を入れることで、最後までゆったり観光しやすくなります。</p>
+            </div>
+            <div class="info-item">
+                <h4>バスと電車を使い分ける</h4>
+                <p>混雑する時間帯は、バスより電車移動の方がスムーズな場合があります。</p>
+            </div>
+            <div class="info-item">
+                <h4>昼食の時間を少しずらす</h4>
+                <p>12時前後は飲食店が混雑しやすいため、早め・遅めにすると入りやすくなります。</p>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="footer-content">
+            <h2>京都観光ガイドブック</h2>
+            <i class="fa-brands fa-line"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-instagram"></i>
+
+            <p>京都らしい街並みや人気スポットを、迷わず心地よく巡れるように。
+                初めての観光でも楽しみやすい情報を紹介しています。</p>
+            <nav class="footer-nav">
+                <ul>
+                    <li><a href="#">散策コース</a></li>
+                    <li><a href="#">観光スポット</a></li>
+                    <li><a href="#">お食事</a></li>
+                    <li><a href="#">アクセス</a></li>
+                </ul>
+            </nav>
+            <p class="contact-info">お問い合わせ: <a href="mailto:info@kyoto-tourism.com">info@kyoto-tourism.com</a></p>
+        </div>
+        <p>&copy; 2026 京都観光ガイドブック</p>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

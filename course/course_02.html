@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/stylecss.css">
+    <link rel="stylesheet" href="../css/course.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>京都観光 ―― 迷わず楽しむガイドブック</title>
+</head>
+
+<body>
+
+    <nav id="hamburger-nav">
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div id="hamburger-links">
+                <ul>
+                    <li><a href="../index.html" onclick="toggleMenu()">トップページ
+                            <p>トップページに戻ります。</p>
+                        </a>
+                    </li>
+                    <span></span>
+                    <li><a href="../index.html#course-section" onclick="toggleMenu()">散策コース
+                            <p>効率よく巡るおすすめの散策コースをご紹介します。</p>
+                        </a>
+                    </li>
+                    <span></span>
+                    <li><a href="../index.html#spot-section" onclick="toggleMenu()">おすすめスポット
+                            <p>魅力的なスポットをご紹介します。</p>
+                        </a>
+                    </li>
+                    <span></span>
+                    <li><a href="../index.html#info-section" onclick="toggleMenu()">情報まとめ
+                            <p>快適に観光するためのポイントをご紹介します。</p>
+                        </a>
+                    </li>
+                    <span></span>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <a class="pagetop" href="#">
+        <div class="pagetop__arrow"></div>
+    </a>
+
+    <div class="page-content" onclick="toggleMenu()"></div>
+
+    <header>
+
+        <!-- headerメニュー -->
+
+        <div class="header-container">
+            <h2>
+                <a href="../index.html">京都観光</a>
+            </h2>
+            <nav id="menu-nav">
+                <ul>
+                    <li><a href="../index.html#course-section">散策コース</a></li>
+                    <li><a href="../index.html#spot-section">おすすめスポット</a></li>
+                    <li><a href="../index.html#info-section">情報まとめ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="course-hero course-hero-overlay" id="course-relax-hero">
+        <div class="course-hero-title">
+            <h1>ゆったり巡る</h1>
+            <p> 自然や川沿いの景色を楽しみながら、落ち着いた雰囲気で散策できるコース。<br>
+                歴史的な寺院だけでなく、竹林や川辺の風景も楽しみたい方におすすめです。
+            </p>
+            <p>
+                <span class="course-hero-text-border">嵐山</span>
+                <span class="course-hero-text-border">竹林の小径</span>
+                <span class="course-hero-text-border">桂川</span>
+            </p>
+        </div>
+    </main>
+    <section class="route-section section-box">
+
+        <div class="course-about">
+            <p>
+                嵐山エリアの自然や歴史ある景観をゆったり楽しめる散策コースです。<br>
+                京都駅から電車一本でアクセスでき、観光スポット同士も徒歩で移動できます。<br>
+                竹林の小径や天龍寺、渡月橋周辺を巡りながら、嵐山らしい穏やかな景色を満喫できます。<br>
+                大きな乗り換えもなく、歩くペースに合わせて休憩しながら観光しやすいコースです。
+            </p>
+        </div>
+        <div class="route-flow">
+            <div class="route-station">
+                <h4>京都駅</h4>
+            </div>
+            <div class="route-time">
+                <span class="route-border"></span>
+                <div class="route-text-colum">
+                    <p>
+                        JR嵯峨野線「園部方面行き」に乗車
+                    </p>
+                    <p class="route-time-duration">所要時間：約17分</p>
+                </div>
+            </div>
+            <div class="route-station">
+                <h4>嵯峨嵐山駅　下車</h4>
+            </div>
+            <div class="route-time">
+                <span class="route-border"></span>
+                <div class="route-text-colum">
+                    <p>
+                        嵯峨嵐山駅南口から南西方向へ進み、府道29号線を渡り、そのまま案内看板に従って進む。
+                    </p>
+                    <p class="route-time-duration">所要時間：徒歩約10分</p>
+                </div>
+            </div>
+            <div class="route-item">
+                <div class="route-image" id="route-relax-image-01"></div>
+                <div class="route-description">
+                    <h3>天龍寺</h3>
+                    <p>
+                        世界文化遺産にも登録されている禅寺です。<br>
+                        境内最大の見どころは曹源池庭園。池越しに嵐山を眺めることができ、庭園と自然が一体となった景色を楽しめます。<br>
+                        法堂の天井に描かれた雲龍図も有名ですが、初めて訪れる方にはまず庭園の散策がおすすめです。
+                    </p>
+                    <p class="time-estimate">滞在目安：約45〜60分</p>
+                </div>
+            </div>
+            <div class="route-time">
+                <span class="route-border"></span>
+                <div class="route-text-colum">
+                    <p>天龍寺北門から北へ進む</p>
+                    <p class="route-time-duration">所要時間：徒歩約3分</p>
+                </div>
+            </div>
+            <div class="route-item">
+                <div class="route-image" id="route-relax-image-02"></div>
+                <div class="route-description">
+                    <h3>竹林の小径</h3>
+                    <p>嵐山を代表する散策スポットです。<br>
+                        道の両側に高く伸びる竹が並び、木漏れ日の中を歩くことができます。<br>
+                        写真撮影スポットとして有名ですが、実際に歩いてみると竹が風に揺れる音や周囲の静かな空気も魅力です。<br>
+                        朝の時間帯は比較的人が少なく、落ち着いて散策しやすくなります。<br>
+                    </p>
+                    <p class="time-estimate">滞在目安：約20〜30分</p>
+                </div>
+            </div>
+            <div class="route-time">
+                <span class="route-border"></span>
+                <div class="route-text-colum">
+                    <p>竹林の小径を通り抜けた後、来た道を南方向へ戻る。
+                        天龍寺前を通過し、そのまま人通りの多いメインストリートを南へ進む。</p>
+                    <p class="route-time-duration">所要時間：徒歩約5分</p>
+                </div>
+            </div>
+            <div class="route-item">
+                <div class="route-image" id="route-relax-image-03"></div>
+                <div class="route-description">
+                    <h3>渡月橋</h3>
+                    <p>桂川に架かる全長約155メートルの橋です。<br>
+                        橋の上からは川の流れと嵐山の山並みを一望できます。<br>
+                        橋周辺には休憩できるベンチや店舗も多く、景色を眺めながらひと息つくのにも適しています。<br>
+                        季節によって景色が大きく変わり、春の桜や秋の紅葉の時期には特に人気があります。
+                    </p>
+                    <p class="time-estimate">滞在目安：約20〜30分</p>
+                </div>
+            </div>
+            <div class="route-time">
+                <span class="route-border"></span>
+                <div class="route-text-colum">
+                    <p>桂川を右手に見ながら西方向へ歩く。</p>
+                    <p class="route-time-duration">所要時間：徒歩約10分</p>
+                </div>
+            </div>
+            <div class="route-item">
+                <div class="route-image" id="route-relax-image-04"></div>
+                <div class="route-description">
+                    <h3>桂川河川敷</h3>
+                    <p>観光スポットを巡ったあとにゆっくり過ごせる休憩エリアです。<br>
+                        川沿いには遊歩道が整備されており、桂川の流れや嵐山の景色を眺めながら散策できます。<br>
+                        天気の良い日にはベンチに座って休憩したり、写真を撮ったりしながら落ち着いた時間を過ごせます。<br>
+                        賑やかな観光地とは少し違う、嵐山の日常的な景色を感じられる場所です。
+                    </p>
+                    <p class="time-estimate">滞在目安：約30〜45分</p>
+                </div>
+            </div>
+            <div class="route-time">
+                <span class="route-border"></span>
+                <div class="route-text-colum">
+                    <p>
+                        桂川河川敷から渡月橋方向へ戻り、渡月橋を背にして東方向へ進み、
+                        高架下を抜け、そのまま進む。
+                    </p>
+                    <p class="route-time-duration">所要時間：徒歩約15分</p>
+                </div>
+            </div>
+            <div class="route-station">
+                <h4>嵯峨嵐山駅</h4>
+            </div>
+            <div class="route-time">
+                <span class="route-border"></span>
+                <div class="route-text-colum">
+                    <p>JR嵯峨野線「京都方面行き」に乗車</p>
+                    <p class="route-time-duration">所要時間：約17分</p>
+                </div>
+            </div>
+            <div class="route-station">
+                <h4>京都駅前 下車</h4>
+            </div>
+        </div>
+
+        <div class="back-link">
+            <a href="../index.html#course-section">←コース比較に戻る</a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <h2>京都観光ガイドブック</h2>
+            <i class="fa-brands fa-line"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-instagram"></i>
+
+            <p>京都らしい街並みや人気スポットを、迷わず心地よく巡れるように。
+                初めての観光でも楽しみやすい情報を紹介しています。</p>
+            <nav class="footer-nav">
+                <ul>
+                    <li><a href="../index.html#course-section">散策コース</a></li>
+                    <li><a href="../index.html#spot-section">おすすめスポット</a></li>
+                    <li><a href="../index.html#info-section">情報まとめ</a></li>
+                </ul>
+            </nav>
+            <p class="contact-info">お問い合わせ: <a href="mailto:info@kyoto-tourism.com">info@kyoto-tourism.com</a></p>
+        </div>
+        <p>&copy; 2026 京都観光ガイドブック</p>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+
+</html>

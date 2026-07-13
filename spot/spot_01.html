@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/stylecss.css">
+    <link rel="stylesheet" href="../css/spot.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>京都観光 ―― 迷わず楽しむガイドブック</title>
+</head>
+
+<body>
+
+    <nav id="hamburger-nav">
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div id="hamburger-links">
+                <ul>
+                    <li><a href="../index.html" onclick="toggleMenu()">トップページ
+                            <p>トップページに戻ります。</p>
+                        </a>
+                    </li>
+                    <span></span>
+                    <li><a href="../index.html#course-section" onclick="toggleMenu()">散策コース
+                            <p>効率よく巡るおすすめの散策コースをご紹介します。</p>
+                        </a>
+                    </li>
+                    <span></span>
+                    <li><a href="../index.html#spot-section" onclick="toggleMenu()">おすすめスポット
+                            <p>魅力的なスポットをご紹介します。</p>
+                        </a>
+                    </li>
+                    <span></span>
+                    <li><a href="../index.html#info-section" onclick="toggleMenu()">情報まとめ
+                            <p>快適に観光するためのポイントをご紹介します。</p>
+                        </a>
+                    </li>
+                    <span></span>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <a class="pagetop" href="#">
+        <div class="pagetop__arrow"></div>
+    </a>
+
+    <div class="page-content" onclick="toggleMenu()"></div>
+    <header>
+
+        <!-- headerメニュー -->
+
+        <div class="header-container">
+            <h2>
+                <a href="../index.html">京都観光</a>
+            </h2>
+            <nav id="menu-nav">
+                <ul>
+                    <li><a href="../index.html#course-section">散策コース</a></li>
+                    <li><a href="../index.html#spot-section">おすすめスポット</a></li>
+                    <li><a href="../index.html#info-section">情報まとめ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="section-box">
+        <div class="spot-container">
+            <h2 class="spot-name">清水寺</h2>
+            <div class="spot-content-body">
+                <p>
+                    <img src="../images/list-img-1.jpg" alt="清水寺" class="spot-hero-image">
+                </p>
+                <h3>概要</h3>
+                <p>清水寺は東山の中腹に位置する京都を代表する寺院です。<br>
+                    広い境内には本堂や三重塔など多くの歴史的建造物が建ち並び、四季折々の景色とともに京都らしい風景を楽しむことができます。<br>
+                    なかでも崖の上に張り出した「清水の舞台」は全国的にも知られ、京都観光では外せない見どころのひとつです。
+                </p>
+                <h3>見どころ</h3>
+                <h4>清水の舞台</h4>
+                <p>本堂から大きく張り出した木造の舞台。<br>
+                    京都市街を見渡せる開放的な景色が広がり、春の桜や秋の紅葉の時期には特に美しい眺めを楽しめます。<br>
+                    清水寺を訪れたらまず見ておきたい代表的なスポットです。
+                </p>
+                <h4>三重塔</h4>
+                <p>境内入口付近に建つ鮮やかな朱色の塔。<br>
+                    遠くからでも目を引く存在感があり、清水寺を象徴する風景のひとつとなっています。青空や紅葉との組み合わせも人気です。</p>
+                <h4>音羽の滝</h4>
+                <p>本堂の下に位置する滝で、清水寺の名前の由来ともなった場所です。<br>
+                    参拝後に立ち寄る人も多く、境内の中でも特に賑わいのあるスポットとして知られています。</p>
+                <h3>所要時間・歩く量</h3>
+                <p>
+                    境内を一通り見学する場合は、60〜90分ほどを目安にするとゆっくり観光できます。<br>
+                    周辺の二年坂や三年坂まで散策する場合は、さらに時間に余裕を持っておくと安心です。<br>
+                    清水寺周辺は坂道が多く、境内にも高低差があります。歩く距離自体は長くありませんが、歩きやすい靴での観光がおすすめです。
+                </p>
+                <h3>拝観時間</h3>
+                <p>6:00〜18:00</p>
+                <h3>拝観料</h3>
+                <p>大人：500円<br>
+                    小・中学生：200円<br>
+                    ※最新情報は公式サイトをご確認ください。</p>
+                <h3>アクセス</h3>
+                <p>
+                    JR京都駅からは市バス206系統または100系統を利用し、「清水道」または「五条坂」で下車します。バス停から清水寺までは徒歩約10分です。
+                </p>
+                <p>
+                    参道となる清水坂には土産店や飲食店が並び、寺院へ向かう道中から京都らしい街並みを楽しむことができます。
+                </p>
+            </div>
+            <div class="home-link">
+                <a href="../index.html#spot-section">おすすめスポット一覧へ</a>
+            </div>
+        </div>
+    </main>
+    
+    <footer class="footer">
+        <div class="footer-content">
+            <h2>京都観光ガイドブック</h2>
+            <i class="fa-brands fa-line"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-instagram"></i>
+
+            <p>京都らしい街並みや人気スポットを、迷わず心地よく巡れるように。
+                初めての観光でも楽しみやすい情報を紹介しています。</p>
+            <nav class="footer-nav">
+                <ul>
+                    <li><a href="../index.html#course-section">散策コース</a></li>
+                    <li><a href="../index.html#spot-section">おすすめスポット</a></li>
+                    <li><a href="../index.html#info-section">情報まとめ</a></li>
+                </ul>
+            </nav>
+            <p class="contact-info">お問い合わせ: <a href="mailto:info@kyoto-tourism.com">info@kyoto-tourism.com</a></p>
+        </div>
+        <p>&copy; 2026 京都観光ガイドブック</p>
+    </footer>
+
+    <script src="../js/script.js"></script></body>
+
+</html>

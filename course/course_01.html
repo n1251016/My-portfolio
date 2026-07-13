@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/stylecss.css">
+    <link rel="stylesheet" href="../css/course.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>京都観光 ―― 迷わず楽しむガイドブック</title>
+</head>
+
+<body>
+
+    <nav id="hamburger-nav">
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div id="hamburger-links">
+                <ul>
+                    <li><a href="../index.html" onclick="toggleMenu()">トップページ
+                            <p>トップページに戻ります。</p>
+                        </a>
+                    </li>
+                    <span></span>
+                    <li><a href="../index.html#course-section" onclick="toggleMenu()">散策コース
+                            <p>効率よく巡るおすすめの散策コースをご紹介します。</p>
+                        </a>
+                    </li>
+                    <span></span>
+                    <li><a href="../index.html#spot-section" onclick="toggleMenu()">おすすめスポット
+                            <p>魅力的なスポットをご紹介します。</p>
+                        </a>
+                    </li>
+                    <span></span>
+                    <li><a href="../index.html#info-section" onclick="toggleMenu()">情報まとめ
+                            <p>快適に観光するためのポイントをご紹介します。</p>
+                        </a>
+                    </li>
+                    <span></span>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <a class="pagetop" href="#">
+        <div class="pagetop__arrow"></div>
+    </a>
+
+    <div class="page-content" onclick="toggleMenu()"></div>
+
+    <header>
+
+        <!-- headerメニュー -->
+
+        <div class="header-container">
+            <h2>
+                <a href="../index.html">京都観光</a>
+            </h2>
+            <nav id="menu-nav">
+                <ul>
+                    <li><a href="../index.html#course-section">散策コース</a></li>
+                    <li><a href="../index.html#spot-section">おすすめスポット</a></li>
+                    <li><a href="../index.html#info-section">情報まとめ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="course-hero course-hero-overlay" id="course-standard-hero">
+        <div class="course-hero-title">
+            <h1>王道巡り</h1>
+            <p> 京都らしい街並みや定番スポットを、<br>
+                初めてでも回りやすい動線で楽しめる王道ルート。
+            </p>
+            <p>
+                <span class="course-hero-text-border">清水寺</span>
+                <span class="course-hero-text-border">祇園</span>
+                <span class="course-hero-text-border">鴨川</span>
+            </p>
+        </div>
+    </main>
+    <section class="route-section section-box">
+
+        <div class="course-about">
+            <p>
+                初めての京都でも安心。<br>
+                東山エリアの名所をゆったり巡る、王道の散策コースです。<br>
+                京都駅から清水寺へ向かったあとは、祇園や鴨川まで歴史ある街並みをのんびり歩いて下るだけ。<br>
+                乗り換えの煩わしさがなく、移動距離もコンパクトなため、ご自身のペースで無理なく京都らしさを満喫していただけます。
+            </p>
+        </div>
+        <div class="route-flow">
+            <div class="route-station">
+                <h4>京都駅</h4>
+            </div>
+            <div class="route-time">
+                <span class="route-border"></span>
+                <div class="route-text-colum">
+                    <p>京都駅前バスターミナルから<br>
+                        市バス206系統「祇園・北大路バスターミナル方面」<br>
+                        もしくは100系統「清水寺・銀閣寺方面」乗車</p>
+                    <p class="route-time-duration">所要時間：約15分</p>
+                </div>
+            </div>
+            <div class="route-station">
+                <h4>「清水道」バス停下車</h4>
+            </div>
+            <div class="route-time">
+                <span class="route-border"></span>
+                <div class="route-text-colum">
+                    <p>清水道バス停から東方向へ進み、清水坂を上る</p>
+                    <p class="route-time-duration">所要時間：徒歩約10分</p>
+                </div>
+            </div>
+            <div class="route-item">
+                <div class="route-image" id="route-standard-image-01"></div>
+                <div class="route-description">
+                    <h3>清水寺</h3>
+                    <p>境内への入り口にそびえる三重塔は、高さ約31メートルと国内最大級。昭和の大修理で落成当時の鮮やかな朱色が復元されました。<br>
+                        清水寺は、京都の寺院の中でも珍しく朝6時から開門しています。<br>
+                        朝の時間帯は比較的人が少なく、ゆったり観光しやすくなります。
+                    </p>
+                    <p class="time-estimate">滞在目安：約60〜75分</p>
+                </div>
+            </div>
+            <div class="route-time">
+                <span class="route-border"></span>
+                <div class="route-text-colum">
+                    <p>清水寺仁王門側から西方向へ下り</p>
+                    <p class="route-time-duration">所要時間：徒歩約5分</p>
+                </div>
+            </div>
+            <div class="route-item">
+                <div class="route-image" id="route-standard-image-02"></div>
+                <div class="route-description">
+                    <h3>二年坂・三年坂</h3>
+                    <p>京都の伝統的な街並みを楽しむことができるおすすめのスポットです。<br>
+                        坂道に軒を連ねる店々には、清水焼の器、竹細工、お香など、職人の技が光る逸品が並びます。<br>
+                        老舗の七味唐辛子店や和菓子処に立ち寄りながら、本物の京都の文化に触れる上質な買い物をすることができます。
+                    </p>
+                    <p class="time-estimate">滞在目安：約30〜45分</p>
+                </div>
+            </div>
+            <div class="route-time">
+                <span class="route-border"></span>
+                <div class="route-text-colum">
+                    <p>三年坂を北方向へ進み、ねねの道を歩く</p>
+                    <p class="route-time-duration">所要時間：徒歩約10分</p>
+                </div>
+            </div>
+            <div class="route-item">
+                <div class="route-image" id="route-standard-image-03"></div>
+                <div class="route-description">
+                    <h3>八坂神社</h3>
+                    <p>「祇園さん」の名で全国から親しまれる八坂神社は、全国にある素戽鳴尊（すさのおのみこと）を祀る神社の総本社。<br>
+                        古くから京の街を疫病や災いから守ってきた、極めて格式高い古社です。<br>
+                        八坂神社の本殿は、本堂と拝殿を一つの巨大な屋根で覆う「祇園造（ぎおんづくり）」という独特の建築様式を採用しています。
+                    </p>
+                    <p class="time-estimate">滞在目安：約20〜30分</p>
+                </div>
+            </div>
+            <div class="route-time">
+                <span class="route-border"></span>
+                <div class="route-text-colum">
+                    <p>八坂神社西楼門から西方向へ進み、四条通周辺を歩く</p>
+                    <p class="route-time-duration">所要時間：徒歩約5分</p>
+                </div>
+            </div>
+            <div class="route-item">
+                <div class="route-image" id="route-standard-image-04"></div>
+                <div class="route-description">
+                    <h3>祇園</h3>
+                    <p>鴨川の東側に広がる「祇園」は、江戸時代に八坂神社の門前町として栄え、今なお日本屈指の花街としての格式を誇るエリアです。<br>
+                        四条通を挟んで南北に伸びる「花見小路通（はなみこうじどおり）」は、祇園の象徴。<br>
+                        特に四条通より南側には、お茶屋や格調高い料亭が軒を連ね、伝統的な意匠の町家が見事な景観を作り出しています。
+                    </p>
+                    <p class="time-estimate">滞在目安：約60〜90分</p>
+                </div>
+            </div>
+            <div class="route-time">
+                <span class="route-border"></span>
+                <div class="route-text-colum">
+                    <p>四条通を西方向へ進み、四条大橋を渡る</p>
+                    <p class="route-time-duration">所要時間：徒歩約15分</p>
+                </div>
+            </div>
+            <div class="route-item">
+                <div class="route-image" id="route-standard-image-05"></div>
+                <div class="route-description">
+                    <h3>鴨川</h3>
+                    <p>京都の街を南北に貫く「鴨川」。平安の昔から京の歴史を見守り、文学や芸術の舞台ともなってきた、まさに京都の母なる川です。<br>
+                        鴨川に架かる「三条大橋」や「四条大橋」は、かつての東海道の終着点であり、歴史の節目を見届けてきた名橋。<br>
+                        橋の上から南北を見渡せば、開放感あふれる素晴らしいパノラマが広がり、旅の移動中にもふと足を止めたくなる美しさがあります。
+                    </p>
+                    <p class="time-estimate">滞在目安：約30〜45分</p>
+                </div>
+            </div>
+            <div class="route-time">
+                <span class="route-border"></span>
+                <div class="route-text-colum">
+                    <p>鴨川（四条大橋周辺）より西へ</p>
+                    <p class="route-time-duration">所要時間：徒歩約３分</p>
+                </div>
+            </div>
+            <div class="route-station">
+                <h4>「四条河原町」バス停</h4>
+            </div>
+            <div class="route-time">
+                <span class="route-border"></span>
+                <div class="route-text-colum">
+                    <p>市バス（4・5・17・205号系統など）「京都駅前行」乗車</p>
+                    <p class="route-time-duration">所要時間：約15分</p>
+                </div>
+            </div>
+            <div class="route-station">
+                <h4>京都駅前 下車</h4>
+            </div>
+        </div>
+
+        <div class="back-link">
+            <a href="../index.html#course-section">←コース比較に戻る</a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <h2>京都観光ガイドブック</h2>
+            <i class="fa-brands fa-line"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-instagram"></i>
+
+            <p>京都らしい街並みや人気スポットを、迷わず心地よく巡れるように。
+                初めての観光でも楽しみやすい情報を紹介しています。</p>
+            <nav class="footer-nav">
+                <ul>
+                    <li><a href="../index.html#course-section">散策コース</a></li>
+                    <li><a href="../index.html#spot-section">おすすめスポット</a></li>
+                    <li><a href="../index.html#info-section">情報まとめ</a></li>
+                </ul>
+            </nav>
+            <p class="contact-info">お問い合わせ: <a href="mailto:info@kyoto-tourism.com">info@kyoto-tourism.com</a></p>
+        </div>
+        <p>&copy; 2026 京都観光ガイドブック</p>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+
+</html>

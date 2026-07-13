@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/stylecss.css">
+    <link rel="stylesheet" href="../css/spot.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>京都観光 ―― 迷わず楽しむガイドブック</title>
+</head>
+
+<body>
+
+    <nav id="hamburger-nav">
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div id="hamburger-links">
+                <ul>
+                    <li><a href="../index.html" onclick="toggleMenu()">トップページ
+                            <p>トップページに戻ります。</p>
+                        </a>
+                    </li>
+                    <span></span>
+                    <li><a href="../index.html#course-section" onclick="toggleMenu()">散策コース
+                            <p>効率よく巡るおすすめの散策コースをご紹介します。</p>
+                        </a>
+                    </li>
+                    <span></span>
+                    <li><a href="../index.html#spot-section" onclick="toggleMenu()">おすすめスポット
+                            <p>魅力的なスポットをご紹介します。</p>
+                        </a>
+                    </li>
+                    <span></span>
+                    <li><a href="../index.html#info-section" onclick="toggleMenu()">情報まとめ
+                            <p>快適に観光するためのポイントをご紹介します。</p>
+                        </a>
+                    </li>
+                    <span></span>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <a class="pagetop" href="#">
+        <div class="pagetop__arrow"></div>
+    </a>
+
+    <div class="page-content" onclick="toggleMenu()"></div>
+    <header>
+
+        <!-- headerメニュー -->
+
+        <div class="header-container">
+            <h2>
+                <a href="../index.html">京都観光</a>
+            </h2>
+            <nav id="menu-nav">
+                <ul>
+                    <li><a href="../index.html#course-section">散策コース</a></li>
+                    <li><a href="../index.html#spot-section">おすすめスポット</a></li>
+                    <li><a href="../index.html#info-section">情報まとめ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="section-box">
+        <div class="spot-container">
+            <h2 class="spot-name">嵐山</h2>
+            <div class="spot-content-body">
+                <p>
+                    <img src="../images/list-img-2.jpg" alt="嵐山" class="spot-hero-image">
+                </p>
+                <h3>概要</h3>
+                <p>嵐山は、桂川沿いに広がる自然豊かな散策エリアです。<br>
+                    渡月橋を中心に、竹林の小径や天龍寺などの見どころが徒歩圏内に集まっており、京都らしい景色をゆっくり楽しみながら歩くことができます。<br>
+                    寺院や庭園だけでなく、川辺の景色や山並みも魅力のひとつです。<br>
+                    観光地として整備されながらも自然が身近に感じられ、季節によって大きく表情が変わるため、何度訪れても違った景色を楽しめます。
+                </p>
+                <h3>見どころ</h3>
+                <h4>渡月橋</h4>
+                <p>桂川に架かる橋で、嵐山を象徴する景観として知られています。<br>
+                    橋の上からは川の流れと山並みを一緒に眺めることができ、春は桜、秋は紅葉と季節ごとの風景を楽しめます。<br>
+                    橋の周辺には休憩できるスペースも多く、散策の途中に立ち止まって景色を眺める人の姿もよく見られます。
+                </p>
+                <h4>竹林の小径</h4>
+                <p>天龍寺北側から続く竹林の散策路です。道の両側に高く伸びた竹が並び、日中でもやわらかな光の中を歩くことができます。<br>
+                    写真撮影スポットとしても人気がありますが、実際に歩いてみると、竹が風に揺れる音や周囲の静かな空気が印象に残ります。<br>
+                    朝の時間帯は比較的人が少なく、落ち着いて散策しやすくなります。</p>
+                <h4>天龍寺</h4>
+                <p>1339年に創建された禅寺で、世界文化遺産「古都京都の文化財」の構成資産のひとつです。<br>
+                    境内にある曹源池庭園は、池越しに嵐山を眺められる庭園として知られています。</p>
+                <h3>所要時間・歩く量</h3>
+                <p>
+                    渡月橋周辺だけを散策する場合は30〜45分ほどですが、竹林の小径や天龍寺まで含めて巡る場合は2〜3時間ほど見ておくと余裕を持って観光できます。<br>
+                    嵐山エリアは大きな坂道は比較的少ないものの、複数のスポットを徒歩で巡ることになるため歩行距離はやや長めです。<br>
+                    景色を見ながら歩く時間も含めて、ゆったり散策するのがおすすめです。
+                </p>
+                <h3>営業時間</h3>
+                <p>嵐山エリア自体は自由に散策できます。</p>
+                <h3>料金</h3>
+                <h4>竹林の小径</h4>
+                <p>散策自由・無料</p>
+                <h4>天龍寺（庭園）</h4>
+                <p>拝観時間：8:30〜17:00（受付終了16:50）<br>
+                    拝観料：高校生以上500円、小中学生300円<br>
+                    ※最新情報は公式サイトをご確認ください。</p>
+                <h3>アクセス</h3>
+                <p>
+                    JR京都駅からはJR嵯峨野線を利用し、「嵯峨嵐山駅」で下車します。駅から渡月橋周辺までは徒歩約10〜15分です。<br>
+                    また、嵐電（京福電鉄）嵐山駅や阪急嵐山駅からもアクセスできます。
+                </p>
+                <p>
+                    観光の中心となる渡月橋周辺から竹林の小径、天龍寺までは徒歩で移動できる距離にまとまっているため、公共交通機関を利用したあとにそのまま散策を始めやすいエリアです。
+                </p>
+            </div>
+            <div class="home-link">
+                <a href="../index.html#spot-section">おすすめスポット一覧へ</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <h2>京都観光ガイドブック</h2>
+            <i class="fa-brands fa-line"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-instagram"></i>
+
+            <p>京都らしい街並みや人気スポットを、迷わず心地よく巡れるように。
+                初めての観光でも楽しみやすい情報を紹介しています。</p>
+            <nav class="footer-nav">
+                <ul>
+                    <li><a href="../index.html#course-section">散策コース</a></li>
+                    <li><a href="../index.html#spot-section">おすすめスポット</a></li>
+                    <li><a href="../index.html#info-section">情報まとめ</a></li>
+                </ul>
+            </nav>
+            <p class="contact-info">お問い合わせ: <a href="mailto:info@kyoto-tourism.com">info@kyoto-tourism.com</a></p>
+        </div>
+        <p>&copy; 2026 京都観光ガイドブック</p>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+
+</html>
