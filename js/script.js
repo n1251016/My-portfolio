@@ -14,3 +14,14 @@ function toggleMenu() {
   body.classList.toggle("no-scroll");
   html.classList.toggle("no-scroll");
 }
+
+// アンカーリセット
+window.addEventListener("load", () => {
+  if (window.location.hash) {
+    history.replaceState(
+      null,
+      "",
+      window.location.pathname
+    );
+  }
+});
