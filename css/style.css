@@ -83,7 +83,7 @@ img {
   right: 50px;
   text-align: center;
   cursor: pointer;
-  z-index: 9999;
+  z-index: 999;
 }
 
 #go_top::after {
@@ -221,7 +221,7 @@ img {
 
 .mv-container {
   width: min(960px, 100%);
-  height: 172.8px;
+  height: auto;
   margin: 0 auto;
   padding: 0 24px;
   text-align: left;
@@ -327,7 +327,7 @@ img {
   align-items: flex-start;
   justify-content: space-between;
   margin-bottom: 50px;
-  height: 6rem;
+  height: auto;
 }
 
 .skill-img {
@@ -544,6 +544,24 @@ img {
     display: block;
   }
 
+  /* TOPへのボタン */
+  #go_top {
+    width: 40px;
+    height: 40px;
+    right: 16px;
+    bottom: 12px;
+    padding-top: 16px;
+    font-size: 12px;
+  }
+
+  #go_top::after {
+    width: 8px;
+    height: 8px;
+    border-top: 2px solid black;
+    border-left: 2px solid black;
+    top: 9px;
+  }
+
   /* 見出し */
   .title {
     font-size: 26px;
@@ -584,7 +602,7 @@ img {
   }
 
   .gnav-item a {
-    font-size: 10px;
+    font-size: 8px;
   }
 
   .gnav-item a:after {
@@ -664,22 +682,22 @@ img {
   }
 
   /* About */
-  .profile {
+  .about_profile{
     display: block;
   }
 
-  .profile-img {
+  .about_profile-img {
     width: 150px;
     margin: 0 auto;
-    margin-bottom: 25px;
+    margin-bottom: 50px;
   }
 
-  .profile-body p {
+  .about_profile-body p {
     font-size: 14px;
-    line-height: 1.7;
+    line-height: 1.8;
   }
 
-  .profile-body p:not(:last-child) {
+  .about_profile-body p:not(:last-child) {
     margin-bottom: 20px;
   }
 
