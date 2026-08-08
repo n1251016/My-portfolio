@@ -327,7 +327,8 @@ img {
   align-items: flex-start;
   justify-content: space-between;
   margin-bottom: 50px;
-  height: auto;
+  height: 120px;
+  object-fit: cover;
 }
 
 .skill-img {
@@ -565,7 +566,7 @@ img {
   /* 見出し */
   .title {
     font-size: 26px;
-    margin-bottom: 20px;
+    margin-bottom: 36px;
   }
 
   .lead {
@@ -668,7 +669,7 @@ img {
 
   .skill-columns {
     flex-direction: column;
-    padding-bottom: 35px;
+    padding-bottom: 16px;
     gap: 0;
   }
 
